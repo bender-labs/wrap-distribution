@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
+        <PackageTags>f#, fsharp</PackageTags>
+        <PackageProjectUrl>https://github.com/bender-labs/wrap-distribution</PackageProjectUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <Authors>Bender Labs</Authors>
+        <RepositoryUrl>https://github.com/bender-labs/wrap-distribution</RepositoryUrl>
+        <!-- owners is not supported in MSBuild -->
+    </PropertyGroup>
+</Project>

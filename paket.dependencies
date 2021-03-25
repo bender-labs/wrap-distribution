@@ -1,0 +1,8 @@
+source https://api.nuget.org/v3/index.json
+
+storage: none
+nuget Argu
+nuget FSharp.Core >= 5.0
+nuget FsUnit.xUnit
+nuget Microsoft.NET.Test.Sdk >= 16.0
+nuget Nichelson
