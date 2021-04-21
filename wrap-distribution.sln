@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{A7114C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E483140E-DC3B-4055-AA75-859A40585BB1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Distribution.App", "src\Distribution.App\Distribution.App.fsproj", "{921D5678-F73B-4451-9950-F9163D57A007}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Distribution.Console", "src\Distribution.Console\Distribution.Console.fsproj", "{921D5678-F73B-4451-9950-F9163D57A007}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D6825E68-5BD4-4E76-8638-B08538E07F94}"
 EndProject

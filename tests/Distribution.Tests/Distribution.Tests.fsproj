@@ -6,7 +6,10 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Distribution.App\Distribution.App.fsproj" />
+    <ProjectReference Include="..\..\src\Distribution.Console\Distribution.Console.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Multisig\Multisig.test.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
