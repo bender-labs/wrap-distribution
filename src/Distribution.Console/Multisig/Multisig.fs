@@ -77,7 +77,7 @@ let distributionCall
 
     let signaturesP =
         signatures
-        |> Seq.map (fun s -> $"Some \"%s{s}\"")
+        |> Seq.map (fun s -> if s = "" then  "None" else $"Some \"%s{s}\"")
         |> String.concat ";"
 
     let distributionP =

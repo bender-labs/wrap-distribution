@@ -1,16 +1,19 @@
 [<RequireQualifiedAccess>]
 module Distribution.Command.DistributeCommands
 
+open System
 open Distribution
 open Distribution.Types
 open FSharp.Data
+open Netezos.Contracts
 open Nichelson
 
-type DistributionCsv = CsvProvider<"sample.csv", ";", ResolutionFolder=__SOURCE_DIRECTORY__>
+type DistributionCsv = CsvProvider<"sample.csv", ResolutionFolder=__SOURCE_DIRECTORY__, Schema=",string">
 
-let precision = bigint (pown 10 8)
+let precision = decimal (pown 10 8) |> (*)
 
-let scale (v: int) = (bigint v) * precision
+let scale (v: string) =
+    bigint (v |> Decimal.Parse |> precision)
 
 let private csvToDistribution (csv: string) =
     let data = DistributionCsv.Load csv
