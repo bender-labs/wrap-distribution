@@ -34,7 +34,7 @@ let distribute (p: ProgramArgs ParseResults) (command: DistributeArgs ParseResul
                     Counter:{counter}
                     """
 
-            let payload =
+            let ((addressCount, total), payload) =
                 DistributeCommands.packPayload
                     { Address = multisig
                       ChainId = chainId
@@ -42,7 +42,8 @@ let distribute (p: ProgramArgs ParseResults) (command: DistributeArgs ParseResul
                     tokenContract
                     csvFile
 
-            printfn $"%s{payload}"
+            printfn $"Distribute {total} to {addressCount} addresses"
+            printfn $"payload:\n%s{payload}"
         | _ ->
             (errorHandler :> IExiter)
                 .Exit("Missing CSV file", ErrorCode.CommandLine)
