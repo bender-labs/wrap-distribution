@@ -5,7 +5,6 @@ open System
 open Distribution
 open Distribution.Types
 open FSharp.Data
-open Netezos.Contracts
 open Nichelson
 
 type DistributionCsv = CsvProvider<"sample.csv", ResolutionFolder=__SOURCE_DIRECTORY__, Schema=",string">
