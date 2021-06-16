@@ -1,4 +1,4 @@
-# arch can osx-x64 linux-x64 win-x64
+# arch can be osx-arm64 osx-x64 linux-x64 win-x64
 
 PUBLISH_DIR=publish
 

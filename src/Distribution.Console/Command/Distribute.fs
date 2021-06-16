@@ -7,7 +7,9 @@ open Distribution.Types
 open FSharp.Data
 open Nichelson
 
-type DistributionCsv = CsvProvider<"sample.csv", ResolutionFolder=__SOURCE_DIRECTORY__>
+[<Literal>]
+let sample = __SOURCE_DIRECTORY__ + "/sample.csv"
+type DistributionCsv = CsvProvider<sample>
 
 let precision = decimal (pown 10 8) |> (*) >> bigint
 
@@ -23,7 +25,7 @@ let packPayload (multisig: MultisigTarget) (tokenContract: string) (csv: string)
 
     let distributions = csvToDistribution csv
 
-    let (addresses, total) =
+    let addresses, total =
         distributions
         |> Seq.fold (fun (addresses, total) (_, amount) -> (addresses + 1, total + amount)) (0, 0I)
 
